@@ -22,8 +22,21 @@ print(Back.RESET + '='*185 + '\n')
 time.sleep(0.5)
 
 # take in message and keyword from user (capital letters, no space)
-message_instruct = input("Enter your message: ").upper().strip()
-key_instruct = input("Key: ").upper().strip()
+message_instruct = f"{green}Enter your message: "
+
+for letter in message_instruct:
+    print(letter, end='')
+    time.sleep(0.01)
+user_message = input().upper().strip()
+
+key_instruct = f"{green}Key: "
+
+for letter in key_instruct:
+    print(letter, end='')
+    time.sleep(0.01)
+
+user_key = input().upper().strip()
+time.sleep(0.3)
 
 # create class for Vigenère Cipher
 
@@ -92,5 +105,5 @@ class Cipher:
         print(converted_cipher)
 
 
-to_cipher = Cipher(message_instruct, key_instruct)        # for testing
+to_cipher = Cipher(user_message, user_key)
 to_cipher.produce_cipher()
