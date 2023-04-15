@@ -25,6 +25,7 @@ class Cipher:
         translated_key = []  # translated values of key
         add_list = []  # added values
         mod_list = []  # mod values
+        ciphertext = []  # ciphered text
 
         # translate each letter in message and key by getting value in dict
         for i in range(len(self.message)):
@@ -56,5 +57,14 @@ class Cipher:
             else:
                 mod_list.append(add_list[i])
 
-# convert values to corresponding letters
-# print final result
+        # find corresponding letters to accumulated values in mod_list
+        for i in range(len(mod_list)):
+            for each_letter, value in translation.items():
+                if value == mod_list[i]:
+                    ciphertext.append(each_letter)  # add result to ciphertext
+
+        # print final result
+
+
+to_cipher = Cipher(message_instruct, key_instruct)        # for testing
+to_cipher.produce_cipher()
