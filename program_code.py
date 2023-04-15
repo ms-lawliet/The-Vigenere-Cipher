@@ -23,6 +23,7 @@ class Cipher:
         # create lists to contain results of every step
         translated_message = []  # translated values of message
         translated_key = []  # translated values of key
+        add_list = []  # added values
 
         # translate each letter in message and key by getting value in dict
         for i in range(len(self.message)):
@@ -39,6 +40,11 @@ class Cipher:
                     n += 1
                 if n == len(translated_message):
                     break
+
+        # add values with same index in translated_message and translated_key
+        for i in range(len(translated_message)) and range(len(translated_key)):
+            add = translated_message[i] + translated_key[i]
+            add_list.append(add)  # insert each result in add_list
 
 # write values of message in one row
 # write values of keyword until no. of values in message == no. of values in keyword
