@@ -3,6 +3,9 @@
 # ciphertext using the Vigenère cipher.
 
 # take in message and keyword from user (capital letters, no space)
+message_instruct = input("Enter your message: ").upper().strip()
+key_instruct = input("Key: ").upper().strip()
+
 # translate message and key to number values
 # write values of message in one row
 # write values of keyword until no. of values in message == no. of values in keyword
