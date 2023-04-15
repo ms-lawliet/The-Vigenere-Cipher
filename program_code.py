@@ -103,6 +103,18 @@ class Cipher:         # create class for Vigenère Cipher
         fin_output = (pyfiglet.figlet_format(converted_cipher, font='basic', width=140))
         txt = f'{green}\nGenerated cipher text: \n{Back.BLACK + fin_output}'
 
+        count = 0
+        while count != 4:
+            for i in range(len(colors)):
+                loading = (f"{colors[i]}Generating cipher text" + "." * count)
+                print('\r', loading, end="")
+                time.sleep(0.6)
+                count += 1
+                if count == 4:
+                    print('\r' + '                                   ', end='')
+                    break
+            time.sleep(0.4)
+
         for each_letter in txt:
             print(each_letter, end='')
             time.sleep(0.01)
