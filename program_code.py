@@ -24,6 +24,7 @@ class Cipher:
         translated_message = []  # translated values of message
         translated_key = []  # translated values of key
         add_list = []  # added values
+        mod_list = []  # mod values
 
         # translate each letter in message and key by getting value in dict
         for i in range(len(self.message)):
@@ -46,9 +47,14 @@ class Cipher:
             add = translated_message[i] + translated_key[i]
             add_list.append(add)  # insert each result in add_list
 
-# write values of message in one row
-# write values of keyword until no. of values in message == no. of values in keyword
-# add values of message and keyword with same index
-# for values >= 26, convert to corresponding values by starting again at index 0
+        # for values >= 26, convert to corresponding values by starting again at index 0
+        # add result to mod_list
+        for i in range(len(add_list)):
+            if add_list[i] >= 26:
+                mod = add_list[i] - 26
+                mod_list.append(mod)
+            else:
+                mod_list.append(add_list[i])
+
 # convert values to corresponding letters
 # print final result
