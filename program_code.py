@@ -38,10 +38,8 @@ for letter in key_instruct:
 user_key = input().upper().strip()
 time.sleep(0.3)
 
-# create class for Vigenère Cipher
 
-
-class Cipher:
+class Cipher:         # create class for Vigenère Cipher
     def __init__(self, message, key):
         self.message = message
         self.key = key
