@@ -20,6 +20,15 @@ class Cipher:
                        'L': 11, 'M': 12, 'N': 13, 'O': 14, 'P': 15, 'Q': 16, 'R': 17, 'S': 18, 'T': 19, 'U': 20,
                        'V': 21, 'W': 22, 'X': 23, 'Y': 24, 'Z': 25}
 
+        # create lists to contain results of every step
+        translated_message = []  # translated values of message
+
+        # translate each letter in message and key by getting value in dict
+        for i in range(len(self.message)):
+            if self.message[i] in translation:
+                trans1 = translation.get(self.message[i])
+                translated_message.append(trans1)  # insert each value to translated_message
+
 # write values of message in one row
 # write values of keyword until no. of values in message == no. of values in keyword
 # add values of message and keyword with same index
