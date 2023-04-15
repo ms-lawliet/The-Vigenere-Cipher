@@ -7,6 +7,14 @@ import pyfiglet
 import time
 from colorama import Back
 
+# create list of colors for font
+yellow = "\033[93m"
+red = "\033[91m"
+magenta = "\033[95m"
+white = "\033[97m"
+green = "\033[92m"
+colors = [yellow, red, magenta, white]
+
 # take in message and keyword from user (capital letters, no space)
 message_instruct = input("Enter your message: ").upper().strip()
 key_instruct = input("Key: ").upper().strip()
