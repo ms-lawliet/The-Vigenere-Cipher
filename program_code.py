@@ -15,6 +15,12 @@ white = "\033[97m"
 green = "\033[92m"
 colors = [yellow, red, magenta, white]
 
+# print program title
+print(f'{green}='*185)
+print(Back.BLACK + pyfiglet.figlet_format('The Vigenere Cipher', font='cybermedium', width=175, justify='center'), end='')
+print(Back.RESET + '='*185 + '\n')
+time.sleep(0.5)
+
 # take in message and keyword from user (capital letters, no space)
 message_instruct = input("Enter your message: ").upper().strip()
 key_instruct = input("Key: ").upper().strip()
