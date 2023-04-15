@@ -100,7 +100,12 @@ class Cipher:         # create class for Vigenère Cipher
             converted_cipher += f'{str_cipher} '
 
         # print final result
-        print(converted_cipher)
+        fin_output = (pyfiglet.figlet_format(converted_cipher, font='basic', width=140))
+        txt = f'{green}\nGenerated cipher text: \n{Back.BLACK + fin_output}'
+
+        for each_letter in txt:
+            print(each_letter, end='')
+            time.sleep(0.01)
 
 
 to_cipher = Cipher(user_message, user_key)
