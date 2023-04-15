@@ -70,6 +70,7 @@ class Cipher:
             converted_cipher += f'{str_cipher} '
 
         # print final result
+        print(converted_cipher)
 
 
 to_cipher = Cipher(message_instruct, key_instruct)        # for testing
