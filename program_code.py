@@ -26,6 +26,7 @@ class Cipher:
         add_list = []  # added values
         mod_list = []  # mod values
         ciphertext = []  # ciphered text
+        converted_cipher = ''  # ciphered text in str
 
         # translate each letter in message and key by getting value in dict
         for i in range(len(self.message)):
@@ -62,6 +63,11 @@ class Cipher:
             for each_letter, value in translation.items():
                 if value == mod_list[i]:
                     ciphertext.append(each_letter)  # add result to ciphertext
+
+        # convert each element in ciphertext to str and concatenate to converted_cipher
+        for i in range(len(ciphertext)):
+            str_cipher = str(ciphertext[i])
+            converted_cipher += f'{str_cipher} '
 
         # print final result
 
