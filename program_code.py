@@ -2,6 +2,11 @@
 # no spaces) and the keyword (all uppercase letters) and produce the
 # ciphertext using the Vigenère cipher.
 
+# import built-in modules for design
+import pyfiglet
+import time
+from colorama import Back
+
 # take in message and keyword from user (capital letters, no space)
 message_instruct = input("Enter your message: ").upper().strip()
 key_instruct = input("Key: ").upper().strip()
