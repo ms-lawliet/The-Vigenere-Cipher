@@ -11,7 +11,7 @@
 - *To run this program, the user simply needs to input a message along with its corresponding keyword and in return, a ciphertext will be generated as an encryption.*
 
 ## *Demo*
-Below is a short demo of the program:
+Below is a quick demo of the program:
 
 https://user-images.githubusercontent.com/129574658/232263330-52cb6e57-33f7-4c1d-ab9b-50b4aa74388b.mp
 
