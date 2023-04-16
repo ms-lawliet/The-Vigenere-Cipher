@@ -3,14 +3,12 @@
   <img width="800" src="https://user-images.githubusercontent.com/129574658/232263208-0bdf9d61-d38d-46e8-b63e-741f80a6f069.png"
 </p>
 
-## *Program Description*
+## *About the Program*
 
-<*This*
+*Crafted with Python, the Vigenere cipher is a simple tool utilized to encrypt alphabetic text using poly-alphabetic substitution.*
 
-## *Features*
-
-- 
 ## *Usage*
+- *To run this program, the user simply needs to input a message along with its corresponding keyword and in return, a ciphertext will be generated as an encryption.*
 
 ## *Demo*
 Below is a short demo of the program:
